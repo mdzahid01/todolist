@@ -162,11 +162,11 @@ body{
     top: 50%;
     transform: translateY(-50%);
     left: 10px;
-    background: url('./imgs/unchecked2.png') center/cover no-repeat;
+    background: url('./unchecked2.png') center/cover no-repeat;
 }
 
 .list-container >li.checked::before{
-    background: url('./imgs/checked2.png') center/cover no-repeat;
+    background: url('./checked2.png') center/cover no-repeat;
 }
 
 .list-container >li.checked span{
