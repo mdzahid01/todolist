@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+/* Scrollbar Track */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+    background-color: rgba(255, 255, 255, 0.55); /* Background color with transparency */
+    border-radius: 10px; /* Border radius to match the glassmorphism effect */
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(31, 38, 135, 0.37); /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Border radius to match the glassmorphism effect */
+    box-shadow: 0 0 10px rgba(31, 38, 135, 0.5); /* Box shadow for the thumb */
+}
+
+/* Optionally, you can style the scrollbar track on hover */
+::-webkit-scrollbar:hover {
+    background-color: rgba(255, 255, 255, 0.75); /* Adjusted background color on hover */
+}
+
+/* Optionally, you can style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(31, 38, 135, 0.5); /* Adjusted color on hover */
+}
+
+
+
+::selection {
+   background-color: red;
+    color: white; /* Text color for the selected text */
+}
+
+body{
+    background-image: linear-gradient(to right, #fc00ff, #00dbde);  
+    min-height: 100vh;
+}
+
+
+.upper-body{
+    /* background-color: rgb(238, 220, 208); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    min-width: 80%;
+    min-height: 90vh;
+    /* height: fit-content; */
+    border-radius: 20px;
+    padding: 0 20px;
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.heading-area{
+    display: flex;
+    justify-content: left;
+    align-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.heading-area h2{
+    color: rgb(74, 69, 69);
+}
+
+.heading-area h2 img{
+    width: 60px;
+    height: 60px;
+    margin-left: 5px;
+    position: absolute;
+    transition: all .3s ease-in-out;
+    border-radius: 5px;
+    user-select: none;
+    
+}
+
+.heading-area h2 img:hover{
+    animation: rotate .3s  ease-in-out;
+    margin-top: -20px;
+    /* box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);   */
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+
+}
+
+.todo-creating-area{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+#text-box{
+    /* width: 80%; */
+    flex: 4;
+    padding: 10px 10px;
+    border: none;
+    outline-color: brown;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-family: cursive;
+}
+.btn-create{
+    /* width: 20%; */
+    flex: 1;
+    background-color: rgb(239, 88, 24);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.hr-line{
+    height: 3px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: rgb(105, 104, 104);
+}
+
+.list-container li{
+    list-style: none;
+    padding: 7px 8px 7px 50px;
+
+/* code generated from : https://hype4.academy/tools/glassmorphism-generator */
+    background: rgba( 255, 255, 255, 0.55 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10.5px );
+/* --------------------------------- */
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.list-container >li span,.list-container >li input{
+    flex: 4;
+    max-width: 575px;
+    overflow-x: hidden;
+}
+.list-container >li .toright{
+    flex: 1;
+}
+
+
+.list-container >li:first-child{
+    margin-top:10px;
+}
+
+.list-container >   li::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    background: url('./imgs/unchecked2.png') center/cover no-repeat;
+}
+
+.list-container >li.checked::before{
+    background: url('./imgs/checked2.png') center/cover no-repeat;
+}
+
+.list-container >li.checked span{
+    color: #555;
+    text-decoration: line-through;
+    justify-content: space-between;
+}
+
+.editable-textbox{
+    height: 40px;
+}
+.toright{
+    display: inline-flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    text-align: center;
+}
+
+.fa-pen-to-square{
+    color: rgb(19, 234, 19);
+    width: 50%;
+    /* height: 100%; */
+    padding: 5px 8px;
+    /* text-align: center; */
+}
+
+.fa-trash{
+    color:rgb(239, 88, 24);
+    width: 50%;
+    /* height: 100%; */
+    padding: 5px 8px;
+    /* text-align: center; */
+}
+
+.fa-pen-to-square:hover , .fa-trash:hover{
+    background: rgba( 255, 255, 255, 0.35 );
+}
+
+
+.fa-pen-to-square, .fa-trash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% + 5px);
+    margin-top: -7px;
+    height: fit-content;
+}
+
+
+/* --------------------popup-------------------------------- */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup button {
+    margin: 5px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
